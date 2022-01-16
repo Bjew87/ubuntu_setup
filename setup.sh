@@ -17,7 +17,7 @@ fi
 
 # Check if the script is running as root
 if [ "$EUID" -ne 0 ]; then
-    >&2 echo -e "${RED}Please run xps-tweaks as root!${NC}"
+    >&2 echo -e "${RED}Please run this script as root!${NC}"
     exit 2
 fi
 
@@ -36,6 +36,14 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# Install code and collaboration tools
+echo -e "${GREEN}Do you wish to install code and collaboration tools (VS Code, MS Teams)?${NC}"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) snap install --classic code; break;;
+        No ) break;;
+    esac
+done
 
 # finished
 echo -e "${GREEN}Finished all tasks!${NC}"
