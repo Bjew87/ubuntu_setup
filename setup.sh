@@ -6,6 +6,8 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
+CYAN='\033[0;36m' 
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 release=$(lsb_release -c -s)
@@ -23,12 +25,12 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # update apt
-echo -e "${BLUE}Updating apt.${NC}"
+echo -e "${CYAN}Updating apt.${NC}"
 apt-get -y update
 apt-get -y upgrade
 
 # install basic tools
-echo -e "${BLUE}Installing basic tools.${NC}"
+echo -e "${CYAN}Installing basic tools.${NC}"
 apt-get -y install thunderbird timeshift alacarte
 
 # Install photo tools
@@ -60,4 +62,4 @@ done
 
 
 # finished
-echo -e "${GREEN}Finished all tasks!${NC}"
+echo -e "${YELLOW}Finished all tasks!${NC}"
