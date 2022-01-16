@@ -5,6 +5,7 @@
 # Define colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+BLUE='\[\033[0;34m\]'
 NC='\033[0m' # No Color
 
 release=$(lsb_release -c -s)
@@ -22,12 +23,12 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # update apt
-echo -e "${GREEN}Updating apt.${NC}"
+echo -e "${BLUE}Updating apt.${NC}"
 apt-get -y update
 apt-get -y upgrade
 
 # install basic tools
-echo -e "${GREEN}Installing basic tools.${NC}"
+echo -e "${BLUE}Installing basic tools.${NC}"
 apt-get -y install thunderbird timeshift alacarte
 
 # Install photo tools
@@ -47,6 +48,16 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
+
+# install dropbox
+echo -e "${GREEN}Do you wish to install Dropbox?${NC}"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) snap install nautilus-dropbox; break;;
+        No ) break;;
+    esac
+done
+
 
 # finished
 echo -e "${GREEN}Finished all tasks!${NC}"
