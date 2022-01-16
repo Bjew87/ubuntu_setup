@@ -28,10 +28,10 @@ apt-get -y update
 apt-get -y upgrade
 
 # Install photo tools
-echo -e "${GREEN}Do you wish to install photo tools?${NC}"
+echo -e "${GREEN}Do you wish to install RawTherapee?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) add-apt-repository ppa:dlynch3/ppa; apt update; apt -y install rapid-photo-downloader rawtherapee-data; break;;
+        Yes ) apt -y install rawtherapee-data; break;;
         No ) break;;
     esac
 done
