@@ -21,11 +21,14 @@ if [ "$EUID" -ne 0 ]; then
     exit 2
 fi
 
-#
-echo -e "${GREEN}Updating apt."
-
+# update apt
+echo -e "${GREEN}Updating apt.${NC}"
 apt-get -y update
 apt-get -y upgrade
+
+# install basic tools
+echo -e "${GREEN}Installing basic tools.${NC}"
+apt-get -y install thunderbird timeshift alacarte
 
 # Install photo tools
 echo -e "${GREEN}Do you wish to install RawTherapee?${NC}"
