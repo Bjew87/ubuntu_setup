@@ -1,5 +1,4 @@
 # ubuntu_setup
-private ubuntu setp
 
 run this with the command:
 
