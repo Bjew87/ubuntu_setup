@@ -22,7 +22,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 #
-echo -e "Updating apt first ..."
+echo -e "${GREEN}Updating apt."
 
 apt-get -y update
 apt-get -y upgrade
@@ -35,3 +35,7 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
+
+
+# finished
+echo -e "${GREEN}Finished all tasks!${NC}"
