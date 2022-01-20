@@ -46,7 +46,7 @@ done
 echo -e "${GREEN}Do you wish to install code and collaboration tools (VS Code, MS Teams)?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) snap install --classic code; break;;
+        Yes ) snap install --classic code; apt -y install maven; break;;
         No ) break;;
     esac
 done
