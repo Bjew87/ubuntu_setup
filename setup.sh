@@ -31,7 +31,7 @@ apt-get -y upgrade
 
 # install basic tools
 echo -e "${CYAN}Installing basic tools.${NC}"
-apt-get -y install thunderbird timeshift alacarte
+apt-get -y install gnome-tweaks thunderbird timeshift alacarte cifs-utils
 
 # Install photo tools
 echo -e "${GREEN}Do you wish to install RawTherapee?${NC}"
@@ -46,7 +46,7 @@ done
 echo -e "${GREEN}Do you wish to install code and collaboration tools (VS Code, MS Teams)?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) snap install --classic code; apt -y install maven; break;;
+        Yes ) snap install --classic code; apt -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev; break;;
         No ) break;;
     esac
 done
@@ -55,7 +55,7 @@ done
 echo -e "${GREEN}Do you wish to install Dropbox?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) snap install nautilus-dropbox; break;;
+        Yes ) apt -y install nautilus-dropbox; break;;
         No ) break;;
     esac
 done
