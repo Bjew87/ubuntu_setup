@@ -1,4 +1,6 @@
-# ubuntu_setup
+# Bjew87 personal ubuntu setup script
+
+This is the way I set up a fresh install. Feel free to use it for yourself.
 
 ## Run this with the following command
 
