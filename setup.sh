@@ -60,6 +60,15 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# Install gaming related stuff
+echo -e "${GREEN}Do you wish to install gaming software (Discord, Steam)?${NC}"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) snap install discord; add-apt-repository multiverse; apt-get -y update; apt-get -y steam; break;;
+        No ) break;;
+    esac
+done
+
 # install basic tools
 echo -e "${CYAN}Do apt-get autoremove.${NC}"
 # clean autoremove
