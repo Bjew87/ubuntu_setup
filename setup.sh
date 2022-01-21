@@ -64,7 +64,7 @@ done
 echo -e "${GREEN}Do you wish to install gaming software (Discord, Steam)?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) snap install discord; add-apt-repository multiverse; apt-get -y update; apt-get -y steam; break;;
+        Yes ) snap install discord; add-apt-repository multiverse; apt-get -y update; apt-get -y install steam; break;;
         No ) break;;
     esac
 done
