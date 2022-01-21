@@ -37,7 +37,7 @@ apt-get -y install gnome-tweaks thunderbird timeshift alacarte cifs-utils
 echo -e "${GREEN}Do you wish to install RawTherapee?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) apt -y install rawtherapee-data; break;;
+        Yes ) apt-get -y install rawtherapee-data; break;;
         No ) break;;
     esac
 done
@@ -46,7 +46,7 @@ done
 echo -e "${GREEN}Do you wish to install code and collaboration tools (VS Code, MS Teams)?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) snap install --classic code; apt -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev; break;;
+        Yes ) snap install --classic code; apt-get -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev; break;;
         No ) break;;
     esac
 done
@@ -55,10 +55,15 @@ done
 echo -e "${GREEN}Do you wish to install Dropbox?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) apt -y install nautilus-dropbox; break;;
+        Yes ) apt-get -y install nautilus-dropbox; break;;
         No ) break;;
     esac
 done
+
+# install basic tools
+echo -e "${CYAN}Do apt-get autoremove.${NC}"
+# clean autoremove
+apt-get -y autoremove
 
 
 # finished
