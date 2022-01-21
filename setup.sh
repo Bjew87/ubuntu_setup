@@ -69,6 +69,15 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# install cure slicer for 3D printer
+echo -e "${GREEN}Do you wish to install 3D printing software (Cura slicer)?${NC}"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) snap install cura-slicer; break;;
+        No ) break;;
+    esac
+done
+
 # clean autoremove
 echo -e "${CYAN}Do apt-get autoremove.${NC}"
 apt-get -y autoremove
