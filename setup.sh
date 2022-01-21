@@ -60,7 +60,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
-# Install gaming related stuff
+# Install gaming related software
 echo -e "${GREEN}Do you wish to install gaming software (Discord, Steam)?${NC}"
 select yn in "Yes" "No"; do
     case $yn in
@@ -69,9 +69,8 @@ select yn in "Yes" "No"; do
     esac
 done
 
-# install basic tools
-echo -e "${CYAN}Do apt-get autoremove.${NC}"
 # clean autoremove
+echo -e "${CYAN}Do apt-get autoremove.${NC}"
 apt-get -y autoremove
 
 
