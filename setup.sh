@@ -79,7 +79,9 @@ select yn in "Yes" "No"; do
 done
 
 # clean autoremove
-echo -e "${CYAN}Do apt-get autoremove.${NC}"
+echo -e "${CYAN}A final update, upgrade and autoremove.${NC}"
+apt-get -y update
+apt-get -y upgrade
 apt-get -y autoremove
 
 
