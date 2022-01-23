@@ -78,6 +78,15 @@ select yn in "Yes" "No"; do
     esac
 done
 
+# Streaming sotware
+echo -e "${GREEN}Do you wish to install streaming software (OBS studio)?${NC}"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) apt-get -y install ffmpeg obs-studio; break;;
+        No ) break;;
+    esac
+done
+
 # clean autoremove
 echo -e "${CYAN}A final update, upgrade and autoremove.${NC}"
 apt-get -y update
