@@ -32,6 +32,7 @@ apt-get -y upgrade
 # install basic tools
 echo -e "${CYAN}Installing basic tools.${NC}"
 apt-get -y install gnome-tweaks thunderbird timeshift alacarte cifs-utils
+snap install onlyoffice-desktopeditors
 
 # Install photo tools
 echo -e "${GREEN}Do you wish to install RawTherapee?${NC}"
