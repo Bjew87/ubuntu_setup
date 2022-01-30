@@ -75,7 +75,7 @@ select yn in "Yes" "No"; do
     case $yn in
     Yes)
         snap install --classic code
-        apt-get -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev
+        apt-get -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev php-fpm
         break
         ;;
     No) break ;;
