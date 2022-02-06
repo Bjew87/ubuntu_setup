@@ -74,6 +74,7 @@ echo -e "${GREEN}Do you wish to install code and collaboration tools (VS Code, M
 select yn in "Yes" "No"; do
     case $yn in
     Yes)
+        snap install rpi-imager
         snap install --classic code
         apt-get -y install maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev php-fpm
         break
