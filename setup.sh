@@ -74,18 +74,6 @@ select yn in "Yes" "No"; do
     esac
 done
 
-# Install dropbox
-echo -e "${GREEN}Do you wish to install Dropbox?${NC}"
-select yn in "Yes" "No"; do
-    case $yn in
-    Yes)
-        apt-get -y install nautilus-dropbox
-        break
-        ;;
-    No) break ;;
-    esac
-done
-
 # Install gaming related software
 echo -e "${GREEN}Do you wish to install gaming software (Discord, Steam)?${NC}"
 select yn in "Yes" "No"; do
