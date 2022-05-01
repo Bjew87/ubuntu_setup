@@ -27,15 +27,6 @@ CYAN='\033[0;36m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-# Get release
-release=$(lsb_release -c -s)
-
-# Check if the script is running under Ubuntu 18.04 Bionic Beaver
-if [ "$release" != "bionic" ] && [ "$release" != "focal" ]; then
-    echo >&2 -e "${RED}This script is made for Ubuntu 18.04/20.04!${NC}"
-    exit 1
-fi
-
 # Check if the script is running as root
 if [ "$EUID" -ne 0 ]; then
     echo >&2 -e "${RED}Please run this script as root!${NC}"
