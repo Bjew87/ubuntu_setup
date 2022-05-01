@@ -14,9 +14,6 @@ Web:    www.bjew.de
 
 This script has been highly inspired by JackHack96!
 I also used some of his methods in my script here.
-Please checkout his script right here:
-https://github.com/JackHack96/dell-xps-9570-ubuntu-respin/blob/master/xps-tweaks.sh
-
 """
 
 # Define some colors for terminal output
