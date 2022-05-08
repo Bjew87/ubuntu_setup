@@ -37,7 +37,7 @@ apt-get -y upgrade
 
 # Install basic tools I want to use on every machine
 echo -e "${CYAN}Installing tools I like to use on every machine.${NC}"
-apt-get -y install gnome-shell-extensions gnome-tweaks thunderbird timeshift alacarte cifs-utils wget
+apt-get -y install gnome-shell-extensions gnome-tweaks thunderbird timeshift alacarte cifs-utils wget dnsmasq
 snap install onlyoffice-desktopeditors
 
 """
