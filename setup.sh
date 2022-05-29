@@ -64,7 +64,7 @@ select yn in "Yes" "No"; do
     Yes)
         snap install rpi-imager
         snap install --classic code
-        apt-get -y install git maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev php-fpm
+        apt-get -y install pip git maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev php-fpm
         break
         ;;
     No) break ;;
