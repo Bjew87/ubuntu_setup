@@ -65,6 +65,8 @@ select yn in "Yes" "No"; do
         snap install rpi-imager
         snap install --classic code
         apt-get -y install pip git maven openjdk-11-jdk build-essential libsecret-1-0 libsecret-1-dev php-fpm
+        make --directory=/usr/share/doc/git/contrib/credential/libsecret
+        git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
         break
         ;;
     No) break ;;
