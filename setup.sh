@@ -35,6 +35,9 @@ echo -e "${CYAN}Updating apt.${NC}"
 apt-get -y update
 apt-get -y upgrade
 
+# Some basic settings for QOL
+gsettings set org.gnome.mutter check-alive-timeout 60000
+
 # Install basic tools I want to use on every machine
 echo -e "${CYAN}Installing tools I like to use on every machine.${NC}"
 apt-get -y install gnome-shell-extensions gnome-tweaks thunderbird timeshift alacarte cifs-utils wget dnsmasq
